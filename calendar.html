@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-font: 'Pixelify Sans', sans-serif;
+            --LightSky-Blue: #cce7ff;
+            --MediumSky-Blue: #4098f1;
+            --PurpleOutline-Accent: #6c2ca7;
+            --White-Highlight: #ffffff;
+            --lavender-soft : #b2b2ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* background-color: lightblue; */
+            background-image: url(pixel\ background.jpg);
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            display: block;
+            color: var(--PurpleOutline-Accent);
+            font-family: var(--main-font);
+            /* border: 2px solid pink; */
+            text-align: center;
+            padding: 20px;
+        }
+
+        #div-for-select-box {
+            /* border:2px solid red; */
+            display: flex;
+            justify-content: center;
+        }
+
+        #date-options {
+            /* margin: 20px; */
+            font-family: var(--main-font);
+            color: var(--MediumSky-Blue);
+            font-weight: 600;
+            padding: 10px;
+            width: 300px;
+            border: 2px solid purple;
+            border-radius: 14px;
+            align-self: center;
+            cursor: pointer;
+        }
+         #date-options:focus {
+            outline: none;
+            /* box-shadow: none; */
+        }
+        .date-option {
+            border: 2px solid var(--PurpleOutline-Accent);
+            border-radius: 14px;
+            background-color: var(--White-Highlight);
+            color: var(--MediumSky-Blue);
+            font-weight: 800;
+            font-family: var(--main-font);
+            cursor: pointer;
+            /* border: 2px solid red; */
+        }
+        #date-para {
+            /* border: 2px solid red; */
+            font-family: var(--main-font);
+            color: var(--PurpleOutline-Accent);
+            margin: 10px;
+            padding: 20px;
+            /* text-align: center; */
+             display: flex; 
+          align-items: center;   
+            gap: 6px;  
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>What's the date today!?
+         <span class="icon">
+    <!-- your SVG here -->
+    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="4" width="20" height="18" rx="3" ry="3" fill="#ffffff" stroke="#6c2ca7" stroke-width="1.6"/>
+      <rect x="2" y="8" width="20" height="4" rx="2" fill="#6c2ca7"/>
+      <rect x="6" y="1.6" width="3" height="3" rx="0.6" fill="#6c2ca7"/>
+      <rect x="15" y="1.6" width="3" height="3" rx="0.6" fill="#6c2ca7"/>
+      <g fill="#6c2ca7">
+        <rect x="5"  y="12" width="2" height="2" rx="0.4"/>
+        <rect x="9"  y="12" width="2" height="2" rx="0.4"/>
+        <rect x="13" y="12" width="2" height="2" rx="0.4"/>
+        <rect x="5"  y="15" width="2" height="2" rx="0.4"/>
+        <rect x="9"  y="15" width="2" height="2" rx="0.4"/>
+        <rect x="13" y="15" width="2" height="2" rx="0.4"/>
+      </g>
+    </svg>
+  </span>
+        </h1>
+    </div>
+    <div id="div-for-select-box">
+        <select id="date-options">
+            <option class="date-option" value="dd-mm-yyyy">Day, Month, Year</option>
+            <option class="date-option" value="yyyy-mm-dd">Year, Month, Day</option>
+            <option class="date-option" value="dd-mm-yyyy-h-mm">Day, Month, Year, Hours, Minutes</option>
+        </select>
+    </div>
+    <h2 id="date-para">HELLO YEROBUN
+    </h2>
+    <script src="calender.js"></script>
+</body>
+
+</html>
